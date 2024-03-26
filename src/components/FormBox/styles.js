@@ -2,13 +2,13 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     background-color: #FFFFFF;
-    height: 80vh;
+    height: 500px;
     width: 450px;
     /* margin-right:30px; */
     border-radius:20px;
     padding-left:40px;
     padding-right:40px;
-    padding-top:40px;
+    padding-top:20px;
     text-align:center;
     display:flex;
     flex-direction:column;

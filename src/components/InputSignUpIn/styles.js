@@ -7,13 +7,13 @@ export const Container = styled.div`
     background-color: #F6F6F6;
     color: #212427;
     border-radius: 10px;
-    margin-bottom:30px;
+    margin-bottom:20px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
     > input{
         
-        height: 75px;
+        height: 56px;
         width: 100%;
-        padding: 35px;
+        padding: 25px;
         color: #212427;
         background: transparent;
         border: 0;
