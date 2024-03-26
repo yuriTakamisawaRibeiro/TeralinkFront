@@ -5,7 +5,7 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        overflow-x:hidden;
+        /* overflow-x:hidden; */
     }
 
     body{
@@ -49,15 +49,13 @@ export default createGlobalStyle`
     transition : 708ms;
     padding: 10px 31px;
     transform : translateY(-0px);
-    background-color: #fff;
-    color: #e4ac46;
-    border: solid 1px #e4ac46;
+    background-color: #8966FF;
+    color: #F6F6F6;
     }
 
     a:hover {
         transition : 600ms;
-        transform: translateX(3px);
-        color: #e4ac46;
+        color: #212427;
     }
 
 `

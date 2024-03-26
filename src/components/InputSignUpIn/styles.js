@@ -4,27 +4,22 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-
-    background-color: #E8E8E0;
-    color: #4B5563;
-
+    background-color: #F6F6F6;
+    color: #212427;
     border-radius: 10px;
-    
-
+    margin-bottom:30px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
     > input{
-        height: 56px;
+        
+        height: 75px;
         width: 100%;
-        
-        
-
-        padding: 30px;
-
-        color: #4B5563;
+        padding: 35px;
+        color: #212427;
         background: transparent;
         border: 0;
 
         &:placeholder{
-            color: #52555A;
+            color: #212427;
         }
     }
     > svg{
