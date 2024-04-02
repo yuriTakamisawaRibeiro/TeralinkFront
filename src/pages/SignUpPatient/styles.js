@@ -20,7 +20,7 @@ export const Logo = styled.img`
 
 export const Welcome = styled.img`
     margin-left:150px;
-    height: 70vh;
+    height: 60vh;
 `;
 
 export const Content = styled.div`
@@ -32,7 +32,8 @@ export const Title = styled.h1`
     font-weight: bold;
     text-align:center;
     font-size:35px;
-    padding-bottom:20px;
+    padding-bottom:30px;
+    padding-top:30px;
 `;
 
 export const Wave = styled.img`
@@ -44,4 +45,15 @@ export const Wave = styled.img`
     object-fit: cover;
     z-index: 0; 
 `;
+
+
+
+export const ButtonContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+`
+
+
 

@@ -46,9 +46,6 @@ export default createGlobalStyle`
 
     button:hover{
     filter: brightness(0.9);
-    transition : 708ms;
-    padding: 10px 31px;
-    transform : translateY(-0px);
     background-color: #8966FF;
     color: #F6F6F6;
     }
