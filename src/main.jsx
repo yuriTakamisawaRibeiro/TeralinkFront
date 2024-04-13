@@ -8,6 +8,6 @@ import { SignUpPatient } from './pages/SignUpPatient';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle/>
-    <SignUpPatient />
+    <SigninPatient />
   </React.StrictMode>,
 )
