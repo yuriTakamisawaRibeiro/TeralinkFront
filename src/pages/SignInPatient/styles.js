@@ -6,21 +6,26 @@ export const Container = styled.div`
     align-items: center; 
     height: 100vh; 
     z-index: 1;
-    margin-right:85px;
-    margin-left:50px;
+    margin-right:5.313rem;
+    margin-left:3.125rem;
 `;
 
 export const Logo = styled.img`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    z-index: 2; 
+position:absolute;
+top: 0;
+left: 0;
+width: 12.5rem;
+z-index: 2; 
+@media (max-width: 768px) {
+    display: none;
 `;
 
 export const Welcome = styled.img`
-    margin-left:150px;
-    height: 70vh;
+   margin-left:150px;
+    height: 60vh;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const Content = styled.div`
@@ -31,8 +36,8 @@ export const Title = styled.h1`
     z-index: 1; 
     font-weight: bold;
     text-align:center;
-    font-size:35px;
-    padding-bottom:20px;
+    font-size:2.188rem;
+    padding-bottom:1.25rem;
 `;
 
 export const Wave = styled.img`

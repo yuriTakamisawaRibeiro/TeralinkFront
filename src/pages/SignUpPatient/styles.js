@@ -6,34 +6,45 @@ export const Container = styled.div`
     align-items: center; 
     height: 100vh; 
     z-index: 1;
-    margin-right:85px;
-    margin-left:50px;
+    margin-right:5.313rem;
+    margin-left:3.125rem;
+    @media (max-width: 768px) {
+        flex-direction: column;
 `;
 
 export const Logo = styled.img`
-    position: absolute;
+    position:absolute;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 12.5rem;
     z-index: 2; 
+    @media (max-width: 768px) {
+        display: none;
 `;
 
 export const Welcome = styled.img`
     margin-left:150px;
     height: 60vh;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const Content = styled.div`
     z-index: 1; 
+    @media (max-width: 768px) {
+        flex-direction: column;
 `;
 
 export const Title = styled.h1`
     z-index: 1; 
     font-weight: bold;
     text-align:center;
-    font-size:35px;
-    padding-bottom:30px;
-    padding-top:30px;
+    font-size:2.188rem;
+    padding-bottom:1.875rem;
+    padding-top:1.875rem;
+    @media (max-width: 768px) {
+        flex-direction: column;
 `;
 
 export const Wave = styled.img`
@@ -44,6 +55,8 @@ export const Wave = styled.img`
     height: 100vh;
     object-fit: cover;
     z-index: 0; 
+    @media (max-width: 768px) {
+        flex-direction: column;
 `;
 
 
@@ -51,8 +64,10 @@ export const Wave = styled.img`
 export const ButtonContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    margin-top: 20px;
+    grid-gap: 1.25rem;
+    margin-top: 1.25rem;
+    @media (max-width: 768px) {
+        flex-direction: column;
 `
 
 

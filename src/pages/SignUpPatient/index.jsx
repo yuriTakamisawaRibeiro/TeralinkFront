@@ -3,7 +3,7 @@ import { ButtonSignUpIn } from "../../components/ButtonSignUpIn";
 import { FormBox } from "../../components/FormBox";
 import { FormButton } from "../../components/FormButton";
 import teralinklogo from '../../assets/teralinklogo.png';
-import Loginimg from '../../assets/loginimg.svg';
+import Loginimg from '../../assets/LoginImg.svg';
 import wave from '../../assets/wave.svg';
 import { InputSignUpIn } from "../../components/InputSignUpIn";
 import {FaUser, FaLock  } from "react-icons/fa"
