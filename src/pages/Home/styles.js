@@ -5,6 +5,8 @@ export const Container = styled.div `
 
 `
 
+// ----------------------------------------------------- Content 1 --------------------------------------------------------------
+
 export const Background1 = styled.div`
     position: absolute;
     width: 100%;
@@ -16,7 +18,7 @@ export const Background1 = styled.div`
 `
 
 export const Content1 = styled.div`
-
+    padding-bottom:100px;
 `
 
 export const BannerArea = styled.div`
@@ -59,6 +61,30 @@ export const ButtonArea = styled.div`
 
 `
 
-export const Content2 = styled.div`
 
+// ----------------------------------------------------- Content 2 --------------------------------------------------------------
+export const Content2 = styled.div`
+    background-color:#EAEAEA;
+    display:flex;
+    justify-content:space-between;
+    padding-left:12vw;
+    padding-right:12vw;
+    padding-top:60px;
+    
+`
+
+
+export const BlobArea = styled.div`
+
+`
+
+export const Blob = styled.img`
+    height:470px;
+    max-width: 100%;
+`
+
+export const HomeImage2 = styled.img`
+    height: 450px;
+    align-items:center;
+    max-width: 100%;
 `

@@ -1,7 +1,9 @@
 import { Header } from "../../components/Header"
-import { Container, Background1, Content1, BannerArea, HomeImage1, BannerText, ButtonArea } from "./styles"
+import { Container, Background1, Content1, BannerArea, HomeImage1, BannerText, ButtonArea, Content2, BlobArea, Blob, HomeImage2  } from "./styles"
 import background1 from "../../assets/background1.svg"
 import homeimage1 from "../../assets/homeimage1.svg"
+import homeimage2 from "../../assets/homeimage2.svg"
+import blob from "../../assets/blob.svg"
 import { BannerButton } from "../../components/BannerButton"
 
 export const Home = () => {
@@ -27,6 +29,14 @@ export const Home = () => {
                 </BannerArea>
 
             </Content1>
+
+            <Content2>
+                <BlobArea>
+                    <Blob src={blob} />
+                </BlobArea>
+
+                <HomeImage2 src={homeimage2} />
+            </Content2>
 
         </Container>
     )
