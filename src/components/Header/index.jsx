@@ -1,4 +1,4 @@
-import { Container, Content, Navigation, Icon, DivisionLine} from "./styles"
+import { Container, Content, Navigation, Icon} from "./styles"
 import teralinklogo from '../../assets/teralinklogo.png';
 import { FaUser } from "react-icons/fa";
 // import { Link, useNavigate } from 'react-router-dom';
@@ -14,16 +14,18 @@ export function Header() {
                 <Navigation>
                     <ul>
                         
-                        <li>Agendar</li>
-                        <li>Sobre nós</li>
+                        <li>Como funciona</li>
                         <li>Contato</li>
+                        <li>Sobre nós</li>
+                        <li>Entrar</li>
+                        
                     </ul>
                 </Navigation>
-                <Icon>
+                {/* <Icon>
                     <FaUser />
-                </Icon>
+                </Icon> */}
             </Content>
-            <DivisionLine></DivisionLine>
+            
 
         </Container>
     )

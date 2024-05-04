@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 
 width: 100vw;
-
+padding-top:15px;
 `
 
 export const Content = styled.div`
@@ -11,12 +11,11 @@ export const Content = styled.div`
     width: 100%;
     justify-content: space-between;
     padding: 20px 12vw;
-    margin-top:30px;
     display: flex;
     align-items: center;
     position: relative;
 > img {
-    height:150px;
+    height:120px;
 }
 
 
@@ -38,7 +37,7 @@ ul li{
 }
 
 ul li:hover{
-    color: #6383ff;
+    color: #f6f6f6;
     transition: 0.3s;
 }
 `
@@ -56,9 +55,3 @@ font-size: 35px;
 }
 `
 
-export const DivisionLine = styled.hr`
- margin: auto;
-    width: 78%;
-    height: 1px;
-    background-color: #4B5563;
-`
