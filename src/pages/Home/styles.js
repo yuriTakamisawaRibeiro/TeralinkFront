@@ -81,7 +81,7 @@ position: relative;
 `
 
 export const Blob = styled.img`
-    height:470px;
+    height:550px;
     max-width: 100%;
 `
 
@@ -93,15 +93,13 @@ export const HomeImage2 = styled.img`
 export const SH1 = styled.h1`
 
 position: absolute;
-    top: 15%;
-    left: 49%;
-    width: 16rem;
+    top: 20%;
+    left: 42%;
+    width: 17rem;
     transform: translate(-50%, -50%);
 
-    font-family: 'Nunito';
-    font-style: normal;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 2rem;
 
 `
@@ -110,14 +108,13 @@ export const ST1 = styled.text`
 position: absolute;
 width: 22.188rem;
 height: 15.625rem;
-left: 12%;
-top: 28%;
+left: 19%;
+top: 30%;
 
-font-family: 'Nunito';
-font-style: normal;
+
 font-weight: 400;
-font-size: 1.21rem;
-line-height: 2.19rem;
+font-size: 1.1rem;
+line-height: 2.2rem;
 
 color: #000000;
 
@@ -127,25 +124,116 @@ color: #000000;
 
 export const Content3 = styled.div`
 
-background-color:#EAEAEA;
-    display:flex;
-    justify-content:space-between;
-    padding-left:12vw;
-    padding-right:;
-    padding-top:300px;
+box-sizing: border-box;
+
+position: absolute;
+width: 100%;
+height: 65%;
+left: 0px;
+top: 1511px;
 
 background: linear-gradient(0deg, #8966FF 25.5%, #765BCF 100%);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-`
-export const T2 = styled.h1`
 
-align-items: center;
+`
+export const Title = styled.h1`
+    /* Como funciona a Teralink */
+    position: absolute;
+    width: 496px;
+    height: 48px;
+    left: 50%;
+    top: 55px;
+    transform: translateX(-50%);
+    color: #FFFFFF;`
+
+    export const C3img1 = styled.img`
+
+
+position: absolute;
+width: 243px;
+height: 232px;
+left: 100px;
+top: 141px;
+`
+export const C3img2 = styled.img`
+/* Calendar-rafiki 1 */
+
+position: absolute;
+width: 250px;
+height: 250px;
+left: 650px;
+top: 148px;
+
+
+`
+export const C3img3 = styled.img`
+/* Mental health-bro 1 */
+
+position: absolute;
+width: 250px;
+height: 250px;
+left: 1200px;
+top: 137px;
+`
+export const ImgText = styled.h2`
+/* Procure seu terapeuta */
+
+position: absolute;
+width: 272px;
+height: 30px;
+left: 100px;
+top: 373px;
+
+
+font-weight: 700;
+font-size: 25px;
+line-height: 30px;
+text-wrap: nowrap;
+
 color: #FFFFFF;
-
-
-
-
 `
+export const ImgText2 = styled.h2`
+/* Procure seu terapeuta */
 
+position: absolute;
+width: 272px;
+height: 30px;
+left: 600px;
+top: 373px;
+
+
+font-weight: 700;
+font-size: 25px;
+line-height: 30px;
+text-wrap: nowrap;
+
+color: #FFFFFF;
+`
+export const ImgText3 = styled.h2`
+/* Procure seu terapeuta */
+
+position: absolute;
+width: 272px;
+height: 30px;
+left: 1150px;
+top: 373px;
+
+
+font-weight: 700;
+font-size: 25px;
+line-height: 30px;
+text-wrap: nowrap;
+
+color: #FFFFFF;
+`
+export const FooterFixed = styled.footer`
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+`
 

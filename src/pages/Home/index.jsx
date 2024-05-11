@@ -1,6 +1,9 @@
 import { Header } from "../../components/Header"
-import { Container, Background1, Content1, BannerArea, HomeImage1, BannerText, ButtonArea, Content2, BlobArea, Blob, HomeImage2,SH1,ST1, Content3, T2} from "./styles"
+import { Container, Background1, Content1, BannerArea, HomeImage1, BannerText, ButtonArea, Content2, BlobArea, Blob, HomeImage2,SH1,ST1, Content3, Title,C3img1,C3img2,C3img3,FooterFixed,ImgText,ImgText2,ImgText3} from "./styles"
 import background1 from "../../assets/background1.svg"
+import C3_1 from "../../assets/C3_1.svg"
+import C3_2 from "../../assets/C3_2.svg"
+import C3_3 from "../../assets/C3_3.svg"
 import homeimage1 from "../../assets/homeimage1.svg"
 import homeimage2 from "../../assets/homeimage2.svg"
 import blob from "../../assets/blob.svg"
@@ -44,8 +47,18 @@ export const Home = () => {
                 <HomeImage2 src={homeimage2} />
             </Content2>
             <Content3>
-                <T2>Como funciona a teraLink</T2>
+                <Title>Como funciona a TeraLink </Title>
+                <C3img1 src={C3_1} alt="Imagem de uma mulher analizando perfis com uma lupa"/>
+                <ImgText>Procure seu terapeuta</ImgText>
+                <C3img2 src={C3_2}alt="Homem segurando lapis em frente a um calendario"/>
+                <ImgText2>Encontre o melhor horário</ImgText2>
+                <C3img3 src={C3_3} alt="Mulher meditando com ilustração de corações, flores e folhas saindo de sua cabeça"/>
+                <ImgText3>Organize sua saúde mental</ImgText3>
             </Content3>
+            <FooterFixed>
+            © 2024 TeraLink. Todos os direitos reservados.
+            </FooterFixed>
+
             
 
         </Container>
