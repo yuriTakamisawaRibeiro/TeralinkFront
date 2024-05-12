@@ -236,4 +236,53 @@ export const FooterFixed = styled.footer`
     bottom: 0;
     width: 100%;
 `
+export const Footer = styled.footer`
+
+
+position: absolute;
+width: 100%;
+height: 25%;
+left: 0px;
+top: 2028px;
+
+background: #e1e1e1;
+
+`
+export const Flogo = styled.img`
+
+
+position: relative;
+width: 12%;
+left: 5%;
+right: 86.85%;
+top: 0%;
+bottom: 38.27%;
+
+
+
+`
+export const FNav = styled.div`
+
+
+position: absolute;
+width: 153px;
+height: 200px;
+left: 25%;
+top: 32px;
+line-height: 2.3rem;
+
+
+`
+export const FSup = styled.div`
+
+
+position: absolute;
+width: 127px;
+height: 177px;
+left: 40%;
+top: 34px;
+line-height: 2.3rem;
+
+
+`
 

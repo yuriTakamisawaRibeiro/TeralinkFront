@@ -1,9 +1,10 @@
 import { Header } from "../../components/Header"
-import { Container, Background1, Content1, BannerArea, HomeImage1, BannerText, ButtonArea, Content2, BlobArea, Blob, HomeImage2,SH1,ST1, Content3, Title,C3img1,C3img2,C3img3,FooterFixed,ImgText,ImgText2,ImgText3} from "./styles"
+import { Container, Background1, Content1, BannerArea, HomeImage1, BannerText, ButtonArea, Content2, BlobArea, Blob, HomeImage2,SH1,ST1, Content3, Title,C3img1,C3img2,C3img3,FooterFixed,ImgText,ImgText2,ImgText3,FNav,FSup,Flogo,Footer} from "./styles"
 import background1 from "../../assets/background1.svg"
 import C3_1 from "../../assets/C3_1.svg"
 import C3_2 from "../../assets/C3_2.svg"
 import C3_3 from "../../assets/C3_3.svg"
+import teralinklogo from  "../../assets/teralinklogo.png"
 import homeimage1 from "../../assets/homeimage1.svg"
 import homeimage2 from "../../assets/homeimage2.svg"
 import blob from "../../assets/blob.svg"
@@ -58,6 +59,23 @@ export const Home = () => {
             <FooterFixed>
             © 2024 TeraLink. Todos os direitos reservados.
             </FooterFixed>
+            <Footer>
+                <Flogo src={teralinklogo}></Flogo>
+                <FNav>
+                    <h2>Navegação</h2>
+                    
+                        <ul><a href="/">Home</a></ul>
+                        <ul><a href="/">Perfil</a></ul>
+                        <ul><a href="/">Agendar</a></ul>
+                    
+                </FNav>
+                <FSup>
+                    <h2>Suporte</h2>
+                    <ul><a href="/">Sobre nós</a></ul>
+                    <ul><a href="/">FAQ</a></ul>
+                    <ul><a href="/">Fale conosco</a></ul>
+                </FSup>
+            </Footer>
 
             
 
