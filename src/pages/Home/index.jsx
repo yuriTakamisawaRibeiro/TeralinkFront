@@ -56,9 +56,7 @@ export const Home = () => {
                 <C3img3 src={C3_3} alt="Mulher meditando com ilustração de corações, flores e folhas saindo de sua cabeça"/>
                 <ImgText3>Organize sua saúde mental</ImgText3>
             </Content3>
-            <FooterFixed>
-            © 2024 TeraLink. Todos os direitos reservados.
-            </FooterFixed>
+            
             <Footer>
                 <Flogo src={teralinklogo}></Flogo>
                 <FNav>
@@ -76,6 +74,9 @@ export const Home = () => {
                     <ul><a href="/">Fale conosco</a></ul>
                 </FSup>
             </Footer>
+            <FooterFixed>
+            © 2024 TeraLink. Todos os direitos reservados.
+            </FooterFixed>
 
             
 

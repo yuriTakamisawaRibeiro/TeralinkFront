@@ -129,8 +129,7 @@ box-sizing: border-box;
 position: absolute;
 width: 100%;
 height: 65%;
-left: 0px;
-top: 1511px;
+top: 90rem;
 
 background: linear-gradient(0deg, #8966FF 25.5%, #765BCF 100%);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -151,19 +150,19 @@ export const Title = styled.h1`
 
 
 position: absolute;
-width: 243px;
-height: 232px;
-left: 100px;
-top: 141px;
+width: 15%;
+height: 37%;
+left: 15%;
+top: 25%;
 `
 export const C3img2 = styled.img`
 /* Calendar-rafiki 1 */
 
 position: absolute;
-width: 250px;
-height: 250px;
-left: 650px;
-top: 148px;
+width: 15%;
+height: 40%;
+left: 45%;
+top: 25%;
 
 
 `
@@ -171,18 +170,18 @@ export const C3img3 = styled.img`
 /* Mental health-bro 1 */
 
 position: absolute;
-width: 250px;
-height: 250px;
-left: 1200px;
+width: 15%;
+height: 40%;
+left: 75%;
 top: 137px;
 `
 export const ImgText = styled.h2`
 /* Procure seu terapeuta */
 
 position: absolute;
-width: 272px;
+width: 40%;
 height: 30px;
-left: 100px;
+left: 15%;
 top: 373px;
 
 
@@ -199,7 +198,7 @@ export const ImgText2 = styled.h2`
 position: absolute;
 width: 272px;
 height: 30px;
-left: 600px;
+left: 43%;
 top: 373px;
 
 
@@ -216,7 +215,7 @@ export const ImgText3 = styled.h2`
 position: absolute;
 width: 272px;
 height: 30px;
-left: 1150px;
+left: 73%;
 top: 373px;
 
 
@@ -227,6 +226,7 @@ text-wrap: nowrap;
 
 color: #FFFFFF;
 `
+// ------------------------------------------------------------Footer---------------------------------
 export const FooterFixed = styled.footer`
     background-color: #f8f9fa;
     text-align: center;
@@ -243,7 +243,7 @@ position: absolute;
 width: 100%;
 height: 25%;
 left: 0px;
-top: 2028px;
+top: 2085px;
 
 background: #e1e1e1;
 
