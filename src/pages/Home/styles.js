@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div `
     width:100%;
-
+    overflow-x:hidden;
 `
 
 // ----------------------------------------------------- Content 1 --------------------------------------------------------------
@@ -123,166 +123,45 @@ color: #000000;
 //------------------------------------------Content 3 --------------------------------------------------------
 
 export const Content3 = styled.div`
+    
+    padding-left:12vw;
+    padding-right:12vw;
+    padding-top:60px;
+    background: linear-gradient(0deg, #8966FF 25.5%, #765BCF 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-box-sizing: border-box;
-
-position: absolute;
-width: 100%;
-height: 65%;
-top: 90rem;
-
-background: linear-gradient(0deg, #8966FF 25.5%, #765BCF 100%);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
-`
-export const Title = styled.h1`
-    /* Como funciona a Teralink */
-    position: absolute;
-    width: 496px;
-    height: 48px;
-    left: 50%;
-    top: 55px;
-    transform: translateX(-50%);
-    color: #FFFFFF;`
-
-    export const C3img1 = styled.img`
-
-
-position: absolute;
-width: 15%;
-height: 37%;
-left: 15%;
-top: 25%;
-`
-export const C3img2 = styled.img`
-/* Calendar-rafiki 1 */
-
-position: absolute;
-width: 15%;
-height: 40%;
-left: 45%;
-top: 25%;
-
+    > h2 {
+        color: #FFFF;
+        text-align:center;
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
 
 `
-export const C3img3 = styled.img`
-/* Mental health-bro 1 */
 
-position: absolute;
-width: 15%;
-height: 40%;
-left: 75%;
-top: 137px;
-`
-export const ImgText = styled.h2`
-/* Procure seu terapeuta */
+export const ImageRows = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    
+`;
 
-position: absolute;
-width: 40%;
-height: 30px;
-left: 15%;
-top: 373px;
-
-
-font-weight: 700;
-font-size: 25px;
-line-height: 30px;
-text-wrap: nowrap;
-
-color: #FFFFFF;
-`
-export const ImgText2 = styled.h2`
-/* Procure seu terapeuta */
-
-position: absolute;
-width: 272px;
-height: 30px;
-left: 43%;
-top: 373px;
-
-
-font-weight: 700;
-font-size: 25px;
-line-height: 30px;
-text-wrap: nowrap;
-
-color: #FFFFFF;
-`
-export const ImgText3 = styled.h2`
-/* Procure seu terapeuta */
-
-position: absolute;
-width: 272px;
-height: 30px;
-left: 73%;
-top: 373px;
-
-
-font-weight: 700;
-font-size: 25px;
-line-height: 30px;
-text-wrap: nowrap;
-
-color: #FFFFFF;
-`
-// ------------------------------------------------------------Footer---------------------------------
-export const FooterFixed = styled.footer`
-    background-color: #f8f9fa;
+export const ImageRow = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; 
     text-align: center;
-    padding: 5px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    color: #fff;
+    font-size: 25px;
+    > h3 {
+        padding-top:10px;
+    }
+`;
+
+export const C3_1 = ImageRow;
+export const IC3_2 = ImageRow;
+export const C3_3 = ImageRow;
+
+export const Title2 = styled.div`
 `
-export const Footer = styled.footer`
-
-
-position: absolute;
-width: 100%;
-height: 25%;
-left: 0px;
-top: 2085px;
-
-background: #e1e1e1;
-
-`
-export const Flogo = styled.img`
-
-
-position: relative;
-width: 12%;
-left: 5%;
-right: 86.85%;
-top: 0%;
-bottom: 38.27%;
-
-
-
-`
-export const FNav = styled.div`
-
-
-position: absolute;
-width: 153px;
-height: 200px;
-left: 25%;
-top: 32px;
-line-height: 2.3rem;
-
-
-`
-export const FSup = styled.div`
-
-
-position: absolute;
-width: 127px;
-height: 177px;
-left: 40%;
-top: 34px;
-line-height: 2.3rem;
-
-
-`
-

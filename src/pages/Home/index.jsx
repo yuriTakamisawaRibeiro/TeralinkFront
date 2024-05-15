@@ -1,14 +1,14 @@
 import { Header } from "../../components/Header"
-import { Container, Background1, Content1, BannerArea, HomeImage1, BannerText, ButtonArea, Content2, BlobArea, Blob, HomeImage2,SH1,ST1, Content3, Title,C3img1,C3img2,C3img3,FooterFixed,ImgText,ImgText2,ImgText3,FNav,FSup,Flogo,Footer} from "./styles"
+import { Container, Background1, Content1, BannerArea, HomeImage1, BannerText, ButtonArea, Content2, BlobArea, Blob, HomeImage2,SH1,ST1, Content3, ImageRows, ImageRow} from "./styles"
 import background1 from "../../assets/background1.svg"
 import C3_1 from "../../assets/C3_1.svg"
 import C3_2 from "../../assets/C3_2.svg"
 import C3_3 from "../../assets/C3_3.svg"
-import teralinklogo from  "../../assets/teralinklogo.png"
 import homeimage1 from "../../assets/homeimage1.svg"
 import homeimage2 from "../../assets/homeimage2.svg"
 import blob from "../../assets/blob.svg"
 import { BannerButton } from "../../components/BannerButton"
+import { Footer } from "../../components/Footer"
 
 export const Home = () => {
 
@@ -48,36 +48,28 @@ export const Home = () => {
                 <HomeImage2 src={homeimage2} />
             </Content2>
             <Content3>
-                <Title>Como funciona a TeraLink </Title>
-                <C3img1 src={C3_1} alt="Imagem de uma mulher analizando perfis com uma lupa"/>
-                <ImgText>Procure seu terapeuta</ImgText>
-                <C3img2 src={C3_2}alt="Homem segurando lapis em frente a um calendario"/>
-                <ImgText2>Encontre o melhor horário</ImgText2>
-                <C3img3 src={C3_3} alt="Mulher meditando com ilustração de corações, flores e folhas saindo de sua cabeça"/>
-                <ImgText3>Organize sua saúde mental</ImgText3>
+                <h2>Como funciona a Teralink</h2>
+
+                <ImageRows>
+                    <ImageRow>
+                        <img src={C3_1} alt=""/>
+                        <h3>Procure seu terapeuta</h3>
+                    </ImageRow>
+
+                    <ImageRow>
+                        <img src={C3_2} alt=""/>
+                        <h3>Encontre o melhor horário</h3>
+                    </ImageRow>
+
+                    <ImageRow>
+                        <img src={C3_3} alt=""/>
+                        <h3>Organize sua saúde</h3>
+                    </ImageRow>
+                </ImageRows>
             </Content3>
             
-            <Footer>
-                <Flogo src={teralinklogo}></Flogo>
-                <FNav>
-                    <h2>Navegação</h2>
-                    
-                        <ul><a href="/">Home</a></ul>
-                        <ul><a href="/">Perfil</a></ul>
-                        <ul><a href="/">Agendar</a></ul>
-                    
-                </FNav>
-                <FSup>
-                    <h2>Suporte</h2>
-                    <ul><a href="/">Sobre nós</a></ul>
-                    <ul><a href="/">FAQ</a></ul>
-                    <ul><a href="/">Fale conosco</a></ul>
-                </FSup>
-            </Footer>
-            <FooterFixed>
-            © 2024 TeraLink. Todos os direitos reservados.
-            </FooterFixed>
 
+            <Footer />
             
 
         </Container>
