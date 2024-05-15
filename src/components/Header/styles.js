@@ -31,7 +31,7 @@ export const Navigation = styled.nav`
     position: relative;
   }
 
-  ul li:hover {
+   li:hover {
     color: #f6f6f6;
     transition: 0.3s;
   }
@@ -47,4 +47,37 @@ export const Icon = styled.span`
   }
 `;
 
+export const Dropdown = styled.ul`
+     position: absolute;
+    background-color: #fff;
+    list-style: none;
+    padding: 5px;
+    margin-top: 5px;
+    width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius:5px;
+    
+    li {
+        padding: 8px 16px;
+        font-size:20px;
+        cursor: pointer;
+    }
 
+    li:hover {
+        color: #000;
+        background-color: #ddd;
+    }
+`;
+
+
+export const DropdownItem = styled.li`
+  padding: 8px 16px;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color:#000;
+    background-color: #ddd;
+  }
+`;

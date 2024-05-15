@@ -1,12 +1,37 @@
-import { Container, Content, Navigation, Icon } from "./styles";
+import { Container, Content, Navigation, Icon, Dropdown,  DropdownItem } from "./styles";
 import teralinklogo from '../../assets/teralinklogo.png';
 import { FaUser } from "react-icons/fa";
-import { Dropdown } from 'react-bootstrap';
+import { useState, useEffect, useRef } from "react";
 
 export function Header() {
-    const handleDropdown = (eventKey) => {
-        console.log(`Selected ${eventKey}`);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [dropdownActiveIndex, setDropdownActiveIndex] = useState(null);
+    const dropdownRef = useRef(null);
+
+    const handleEntrarClick = () => {
+        setShowDropdown(!showDropdown);
     };
+
+    const handleDropdownItemClick = (index) => {
+        if (dropdownActiveIndex === index) {
+            setDropdownActiveIndex(null); // Reset if clicked again
+        } else {
+            setDropdownActiveIndex(index);
+        }
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setShowDropdown(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     return (
         <Container>
@@ -18,23 +43,17 @@ export function Header() {
                         <li>Como funciona</li>
                         <li>Contato</li>
                         <li>Sobre nós</li>
-                        <li>
-                            <Dropdown onSelect={handleDropdown}>
-                                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                    Entrar
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item eventKey="comoPaciente">Como paciente</Dropdown.Item>
-                                    <Dropdown.Item eventKey="comoTerapeuta">Como terapeuta</Dropdown.Item>
-                                </Dropdown.Menu>
+                        <li onClick={handleEntrarClick} style={{position: 'relative'}}>
+                            Entrar
+                            {showDropdown && (
+                            <Dropdown ref={dropdownRef}>
+                                <DropdownItem className={dropdownActiveIndex === 0? 'active' : ''} onClick={() => handleDropdownItemClick(0)}>Como paciente</DropdownItem>
+                                <DropdownItem className={dropdownActiveIndex === 1? 'active' : ''} onClick={() => handleDropdownItemClick(1)}>Como terapeuta</DropdownItem>
                             </Dropdown>
+                            )}
                         </li>
                     </ul>
                 </Navigation>
-                {/* <Icon>
-                    <FaUser />
-                </Icon> */}
             </Content>
         </Container>
     );
