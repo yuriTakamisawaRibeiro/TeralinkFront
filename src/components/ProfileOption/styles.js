@@ -25,6 +25,7 @@ export const Title = styled.h2`
 export const SubTitle = styled.h3`
     font-weight: 300;
     font-size: 18px;
+    padding-bottom: 10px;
 `;
 
 export const ImageArea = styled.div`
