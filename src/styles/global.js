@@ -55,4 +55,6 @@ export default createGlobalStyle`
         color: #212427;
     }
 
+    
+
 `

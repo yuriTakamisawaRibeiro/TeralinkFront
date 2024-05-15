@@ -68,7 +68,6 @@ export const Home = () => {
                 </ImageRows>
             </Content3>
             
-
             <Footer />
             
 
