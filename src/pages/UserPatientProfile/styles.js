@@ -26,7 +26,7 @@ export const DataArea = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size: 40px;
+    font-size: 30px;
     font-weight:500;
 
 `;

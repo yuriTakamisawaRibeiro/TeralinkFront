@@ -17,14 +17,14 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-    font-weight: 500;
-    font-size: 25px;
+    font-weight: 400;
+    font-size: 22px;
     padding-bottom: 5px;
 `;
 
 export const SubTitle = styled.h3`
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
 `;
 
 export const ImageArea = styled.div`

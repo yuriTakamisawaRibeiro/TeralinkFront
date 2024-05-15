@@ -14,9 +14,8 @@ export const UserPatientProfile = () => {
 
             <DataArea style={{ alignItems: 'center' }}>
                 <Area>
-                <Title>Meus dados</Title>
-
-                <ProfileOption title="Minhas consultas" subtitle="Histórico de consultas" />
+                    <Title>Meus dados</Title>
+                    <ProfileOption title="Minhas consultas" subtitle="Histórico de consultas" />
                 </Area>
                 <ProfileOption title="Informações pessoais" subtitle="Nome completo, email e CPF" />
                 <ProfileOption title="Credenciais" subtitle="Gerenciar senha" />
