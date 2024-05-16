@@ -11,6 +11,6 @@ import { UserPatientProfile } from './pages/UserPatientProfile';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle/>
-    <UserPatientProfile />
+    <Home />
   </React.StrictMode>,
 )
