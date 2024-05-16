@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { SignInPatient } from './pages/SignInPatient';
-import { SignUpPatient } from './pages/SignUpPatient';
-import { UserPatientProfile } from './pages/UserPatientProfile';
+import { Home } from "../pages/Home"
+import { SignInPatient } from '../pages/SignInPatient';
+import { SignUpPatient } from '../pages/SignUpPatient';
+import { UserPatientProfile } from '../pages/UserPatientProfile';
 
 export function AppRoutes() {
     return (
