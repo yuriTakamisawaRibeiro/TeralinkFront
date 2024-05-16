@@ -59,7 +59,8 @@ export const SignUpPatient = () => {
                     <InputSignUpIn value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Senha" icon={FaLock} />
                     <InputSignUpIn value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} type="password" placeholder="Confirme a senha" icon={FaLock} />
                     <ButtonSignUpIn onClick={handleRegisterClick} title="Cadastrar" />
-                    <a href='/'>Já tem uma conta?</a>
+                    <a href="/SignInPatient">Já tem uma conta?</a>
+
                 </FormBox>
             </Content>
         </Container>

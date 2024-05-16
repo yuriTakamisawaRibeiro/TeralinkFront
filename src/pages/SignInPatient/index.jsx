@@ -34,9 +34,9 @@ export const SignInPatient = () => {
 
     return (
         <Container>
-            <Logo src={teralinklogo} alt="logo da Teralink"/>
-            <Welcome src={Loginimg} alt="imagem de boas-vindas"/>
-            <Wave src={wave} alt="background de uma onda"/>
+            <Logo src={teralinklogo} alt="logo da Teralink" />
+            <Welcome src={Loginimg} alt="imagem de boas-vindas" />
+            <Wave src={wave} alt="background de uma onda" />
             <Content>
                 <FormBox>
                     <Title>Acesse sua conta</Title>
@@ -45,10 +45,13 @@ export const SignInPatient = () => {
                     <ButtonSignUpIn title="Entrar" onClick={handleLogin} />
                     <ButtonContainer>
                         <FormButton title="Esqueceu sua senha?" />
-                        <FormButton title="Crie sua conta" />
+
+                        <a href="/SignUpPatient">
+                            <FormButton title="Crie sua conta" />
+                        </a>
                     </ButtonContainer>
                 </FormBox>
-            </Content>  
+            </Content>
         </Container>
     )
 }

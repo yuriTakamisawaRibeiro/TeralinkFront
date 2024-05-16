@@ -1,4 +1,4 @@
-import { Container, Content, Navigation, Icon, Dropdown,  DropdownItem } from "./styles";
+import { Container, Content, Navigation, Icon, Dropdown, DropdownItem } from "./styles";
 import teralinklogo from '../../assets/teralinklogo.png';
 import { FaUser } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
@@ -43,13 +43,15 @@ export function Header() {
                         <li>Como funciona</li>
                         <li>Contato</li>
                         <li>Sobre nós</li>
-                        <li onClick={handleEntrarClick} style={{position: 'relative'}}>
+                        <li onClick={handleEntrarClick} style={{ position: 'relative' }}>
                             Entrar
                             {showDropdown && (
-                            <Dropdown ref={dropdownRef}>
-                                <DropdownItem className={dropdownActiveIndex === 0? 'active' : ''} onClick={() => handleDropdownItemClick(0)}>Como paciente</DropdownItem>
-                                <DropdownItem className={dropdownActiveIndex === 1? 'active' : ''} onClick={() => handleDropdownItemClick(1)}>Como terapeuta</DropdownItem>
-                            </Dropdown>
+                                <Dropdown ref={dropdownRef}>
+                                    <DropdownItem className={dropdownActiveIndex === 0 ? 'active' : ''} onClick={() => handleDropdownItemClick(0)}>
+                                        <a href="/SignInPatient">Como paciente</a>
+                                    </DropdownItem>
+                                    <DropdownItem className={dropdownActiveIndex === 1 ? 'active' : ''} onClick={() => handleDropdownItemClick(1)}>Como terapeuta</DropdownItem>
+                                </Dropdown>
                             )}
                         </li>
                     </ul>
