@@ -2,11 +2,19 @@ import { Container, Content, Navigation, Icon, Dropdown, DropdownItem } from "./
 import teralinklogo from '../../assets/teralinklogo.png';
 import { FaUser } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 export function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
     const [dropdownActiveIndex, setDropdownActiveIndex] = useState(null);
     const dropdownRef = useRef(null);
+    const navigate = useNavigate(); // Adicione esta linha para obter acesso ao hook useNavigate
+
+    // Função para verificar se o usuário está logado
+    const isLoggedIn = () => {
+        return!!localStorage.getItem('token');
+    };
 
     const handleEntrarClick = () => {
         setShowDropdown(!showDropdown);
@@ -20,9 +28,13 @@ export function Header() {
         }
     };
 
+    const handleUserIconClick = () => {
+        navigate('/userpatientprofile'); // Navegue para a página desejada
+    };
+
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            if (dropdownRef.current &&!dropdownRef.current.contains(event.target)) {
                 setShowDropdown(false);
             }
         }
@@ -36,24 +48,33 @@ export function Header() {
     return (
         <Container>
             <Content>
-                <img src={teralinklogo} alt="logo da Teralink" />
+                <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }} style={{ textDecoration: 'none' }}>
+                    <img src={teralinklogo} alt="logo da Teralink" />
+                </a>
 
                 <Navigation>
                     <ul>
                         <li>Como funciona</li>
                         <li>Contato</li>
                         <li>Sobre nós</li>
-                        <li onClick={handleEntrarClick} style={{ position: 'relative' }}>
-                            Entrar
-                            {showDropdown && (
-                                <Dropdown ref={dropdownRef}>
-                                    <DropdownItem className={dropdownActiveIndex === 0 ? 'active' : ''} onClick={() => handleDropdownItemClick(0)}>
-                                        <a href="/SignInPatient">Como paciente</a>
-                                    </DropdownItem>
-                                    <DropdownItem className={dropdownActiveIndex === 1 ? 'active' : ''} onClick={() => handleDropdownItemClick(1)}>Como terapeuta</DropdownItem>
-                                </Dropdown>
-                            )}
-                        </li>
+                        {/* Renderiza o ícone de usuário se o usuário estiver logado */}
+                        {!isLoggedIn() && (
+                            <li onClick={handleEntrarClick} style={{ position: 'relative' }}>
+                                Entrar
+                                {showDropdown && (
+                                    <Dropdown ref={dropdownRef}>
+                                        <DropdownItem className={dropdownActiveIndex === 0? 'active' : ''} onClick={() => handleDropdownItemClick(0)}>
+                                            <a href="/SignInPatient">Como paciente</a>
+                                        </DropdownItem>
+                                        <DropdownItem className={dropdownActiveIndex === 1? 'active' : ''} onClick={() => handleDropdownItemClick(1)}>Como terapeuta</DropdownItem>
+                                    </Dropdown>
+                                )}
+                            </li>
+                        )}
+                        {/* Renderiza o ícone de usuário se o usuário estiver logado */}
+                        {isLoggedIn() && (
+                            <Icon onClick={handleUserIconClick}><FaUser /></Icon> 
+                        )}
                     </ul>
                 </Navigation>
             </Content>

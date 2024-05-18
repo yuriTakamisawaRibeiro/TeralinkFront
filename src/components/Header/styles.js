@@ -12,7 +12,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  > img {
+  > a img {
     height: 120px;
   }
 `;
@@ -38,10 +38,11 @@ export const Navigation = styled.nav`
 `;
 
 export const Icon = styled.span`
-  font-size: 35px;
+  font-size: 32px;
+  align-items: center;
 
   &:hover {
-    color: #6383ff;
+    color: #fff;
     transition: all ease-in-out 200ms;
     cursor: pointer;
   }
@@ -81,3 +82,5 @@ export const DropdownItem = styled.li`
     background-color: #ddd;
   }
 `;
+
+
