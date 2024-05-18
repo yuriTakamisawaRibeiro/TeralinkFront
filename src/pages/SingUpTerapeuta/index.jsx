@@ -49,10 +49,8 @@ export const SingUpTerapeuta = () => {
                 <InputSignUpIn value={email} onChange={e => setEmail(e.target.value)} type="text" placeholder="Email" icon={MdEmail} />
                 <InputSignUpIn value={cfm} onChange={e => setCfm(e.target.value)} type="text" placeholder="CFM" icon={FaUser} />
                 <InputSignUpIn value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Senha" icon={FaLock} />
-                <ButtonSignUpIn title="Cadastrar" />
-                <a href="">Já possui cadastro?</a>
-                
-                
+                <ButtonSignUpIn onClick={handleRegisterClick}title="Cadastrar" />
+                <a href="/SignInPatient">Já possui cadastro?</a>
                 </FormBox>
             </Content>
             
