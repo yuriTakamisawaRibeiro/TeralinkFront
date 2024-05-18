@@ -4,17 +4,14 @@ import { FaUser } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 
-
 export function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
     const [dropdownActiveIndex, setDropdownActiveIndex] = useState(null);
     const dropdownRef = useRef(null);
-    const navigate = useNavigate(); // Adicione esta linha para obter acesso ao hook useNavigate
+    const navigate = useNavigate();
 
     // Função para verificar se o usuário está logado
-    const isLoggedIn = () => {
-        return!!localStorage.getItem('token');
-    };
+    const isLoggedIn = () =>!!localStorage.getItem('token');
 
     const handleEntrarClick = () => {
         setShowDropdown(!showDropdown);
@@ -22,14 +19,19 @@ export function Header() {
 
     const handleDropdownItemClick = (index) => {
         if (dropdownActiveIndex === index) {
-            setDropdownActiveIndex(null); // Reset if clicked again
+            setDropdownActiveIndex(null);
         } else {
             setDropdownActiveIndex(index);
         }
     };
 
+    const handleTerapeutaClick = () => {
+        navigate('/signupterapeuta'); // Navega para a página de cadastro do terapeuta
+    };
+
+
     const handleUserIconClick = () => {
-        navigate('/userpatientprofile'); // Navegue para a página desejada
+        navigate('/userpatientprofile');
     };
 
     useEffect(() => {
@@ -37,7 +39,7 @@ export function Header() {
             if (dropdownRef.current &&!dropdownRef.current.contains(event.target)) {
                 setShowDropdown(false);
             }
-        }
+        };
 
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
@@ -57,23 +59,30 @@ export function Header() {
                         <li>Como funciona</li>
                         <li>Contato</li>
                         <li>Sobre nós</li>
-                        {/* Renderiza o ícone de usuário se o usuário estiver logado */}
                         {!isLoggedIn() && (
                             <li onClick={handleEntrarClick} style={{ position: 'relative' }}>
                                 Entrar
                                 {showDropdown && (
                                     <Dropdown ref={dropdownRef}>
-                                        <DropdownItem className={dropdownActiveIndex === 0? 'active' : ''} onClick={() => handleDropdownItemClick(0)}>
+                                    <DropdownItem 
+                                            className={dropdownActiveIndex === 1? 'active' : ''} 
+                                            onClick={handleTerapeutaClick}
+                                        >
                                             <a href="/SignInPatient">Como paciente</a>
                                         </DropdownItem>
-                                        <DropdownItem className={dropdownActiveIndex === 1? 'active' : ''} onClick={() => handleDropdownItemClick(1)}>Como terapeuta</DropdownItem>
+                                        <DropdownItem 
+                                            className={dropdownActiveIndex === 1? 'active' : ''} 
+                                            onClick={() => handleDropdownItemClick(1)}
+                                        >
+                                            <a href="/SingUpTerapeuta">Como terapeuta</a>
+                                            
+                                        </DropdownItem>
                                     </Dropdown>
                                 )}
                             </li>
                         )}
-                        {/* Renderiza o ícone de usuário se o usuário estiver logado */}
                         {isLoggedIn() && (
-                            <Icon onClick={handleUserIconClick}><FaUser /></Icon> 
+                            <Icon onClick={handleUserIconClick}><FaUser /></Icon>
                         )}
                     </ul>
                 </Navigation>

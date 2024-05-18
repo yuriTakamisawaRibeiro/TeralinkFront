@@ -18,7 +18,7 @@ export const Background1 = styled.div`
 `
 
 export const Content1 = styled.div`
-    padding-bottom:100px;
+    padding-bottom:74px;
 `
 
 export const BannerArea = styled.div`

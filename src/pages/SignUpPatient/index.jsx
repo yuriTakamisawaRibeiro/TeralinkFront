@@ -66,9 +66,14 @@ export const SignUpPatient = () => {
         }
     }, []); // Dependências vazias para que o effect seja executado apenas na montagem
 
+    // Manipulador para redirecionar quando o logo for clicado
+    const handleLogoClick = () => {
+        navigate('/'); // Redireciona para a página inicial
+    };
+
     return (
         <Container>
-            <Logo src={teralinklogo} alt="logo da Teralink"/>
+            <Logo src={teralinklogo} alt="logo da Teralink" onClick={handleLogoClick}/> {/* Adicione o manipulador de clique */}
             <Welcome src={welcome} alt="imagem de boas-vindas"/>
             <Wave src={wave} alt="background de uma onda"/>
             <Content>

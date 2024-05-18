@@ -14,7 +14,10 @@ export const Logo = styled.img`
 position:absolute;
 top: 0;
 left: 0;
-width: 12.5rem;
+height: 130px;
+margin-left: 50px;
+margin-top:30px;
+cursor: pointer;
 z-index: 2; 
 @media (max-width: 768px) {
     display: none;

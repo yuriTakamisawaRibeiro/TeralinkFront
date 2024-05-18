@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header"
 import{ InputSignUpIn }from "../../components/InputSignUpIn"
-import { Container, Background1, DataArea, Title,Area,ButtonUpdate } from "./styles"
+import { Container, Background1, DataArea, Area,ButtonUpdate } from "./styles"
 import background1 from "../../assets/background1.svg"
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
@@ -41,9 +41,8 @@ export const UserPassword = () => {
 
             <DataArea style={{ alignItems: 'center' }}>
                 <Area>
-                    <Title>Credenciais</Title>
-                    <h2>Atualizar senha</h2>
-                    <InputSignUpIn value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="*******" icon={FaLock} />
+                    <h1>Atualizar senha</h1>
+                    <InputSignUpIn value={password} onChange={e => setPassword(e.target.value)} type="text" placeholder="*******" icon={FaLock} />
                     <ButtonUpdate onClick= {handleUpdateClick}title="atualizar"/>
                     
                     

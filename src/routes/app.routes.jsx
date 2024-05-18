@@ -4,7 +4,7 @@ import { Home } from "../pages/Home"
 import { SignInPatient } from '../pages/SignInPatient';
 import { SignUpPatient } from '../pages/SignUpPatient';
 import { UserPatientProfile } from '../pages/UserPatientProfile';
-import { SingUpTerapeuta } from '../pages/SingUpTerapeuta';
+import { SignUpTerapeuta } from '../pages/SignUpTerapeuta';
 import { UserPassword }from '../pages/UserPassword';
 
 
@@ -15,7 +15,7 @@ export function AppRoutes() {
             <Route path="/signinpatient" element={<SignInPatient />} />
             <Route path="/signuppatient" element={<SignUpPatient />} />
             <Route path="/userpatientprofile" element={<UserPatientProfile />} />
-            <Route path ="/singupterapeuta" element={<SingUpTerapeuta/>} />
+            <Route path ="/singupterapeuta" element={<SignUpTerapeuta/>} />
             <Route path="/userpassword" element={<UserPassword/>} />
             
         </Routes>

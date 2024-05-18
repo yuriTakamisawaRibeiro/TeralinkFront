@@ -26,12 +26,16 @@ export const DataArea = styled.div`
 `;
 
 export const Title = styled.h1`
+
     font-size: 30px;
     font-weight:500;
 
 `;
 
 export const Area = styled.div`
+> h1 {
+    margin-bottom: 30px;
+}
 `
 export const ButtonUpdate = styled.button`
 
@@ -43,7 +47,7 @@ justify-content: center;
 align-items: center;
 padding: 8px 16px;
 gap: 10px;
-
+border: none;
 width: 138px;
 height: 50px;
 

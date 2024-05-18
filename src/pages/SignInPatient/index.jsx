@@ -9,32 +9,43 @@ import { InputSignUpIn } from "../../components/InputSignUpIn";
 import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom'; // Importe useNavigate
 import { api } from "../../services/api";
 
 export const SignInPatient = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate(); // Use o hook useNavigate
+
+    const handleForgotPasswordClick = () => {
+        navigate('/UserPassword'); // Substitua '/UserPassword' pelo caminho correto da sua aplicação
+    };
+    
 
     const handleLogin = async () => {
         try {
             const response = await api.post('/auth/login', { email, password });
             if (response.status === 200) {
-                const token = response.data.token; // Extrai o token da resposta
-                localStorage.setItem('token', token); // Armazena o token no localStorage
+                const token = response.data.token;
+                localStorage.setItem('token', token);
                 console.log("Usuário logado com sucesso!");
-                // Implemente a lógica de redirecionamento ou atualização do estado conforme necessário
+                navigate('/');
             } else {
                 throw new Error('Falha na autenticação');
             }
         } catch (error) {
             console.error("Erro ao tentar logar:", error);
-            // Trate o erro aqui, por exemplo, mostrando uma mensagem ao usuário
         }
+    };
+
+    // Manipulador para redirecionar quando o logo for clicado
+    const handleLogoClick = () => {
+        navigate('/'); // Redireciona para a página inicial
     };
 
     return (
         <Container>
-            <Logo src={teralinklogo} alt="logo da Teralink" />
+            <Logo src={teralinklogo} alt="logo da Teralink" onClick={handleLogoClick} /> {/* Adicione o manipulador de clique */}
             <Welcome src={Loginimg} alt="imagem de boas-vindas" />
             <Wave src={wave} alt="background de uma onda" />
             <Content>
@@ -44,7 +55,7 @@ export const SignInPatient = () => {
                     <InputSignUpIn value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Senha" icon={FaLock} />
                     <ButtonSignUpIn title="Entrar" onClick={handleLogin} />
                     <ButtonContainer>
-                        <FormButton title="Esqueceu sua senha?" />
+                        <FormButton title="Esqueceu sua senha?" onClick={handleForgotPasswordClick} />
 
                         <a href="/SignUpPatient">
                             <FormButton title="Crie sua conta" />

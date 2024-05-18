@@ -23,6 +23,7 @@ export const DataArea = styled.div`
     flex-direction: column;
     justify-content: flex-start; // Garante que o conteúdo seja alinhado ao topo
     align-items: flex-start; // Mantém o conteúdo alinhado à esquerda
+
 `;
 
 export const Title = styled.h1`
@@ -32,4 +33,9 @@ export const Title = styled.h1`
 `;
 
 export const Area = styled.div`
+`
+
+export const ButtonArea = styled.div`
+    display: flex;
+    align-items: center;
 `

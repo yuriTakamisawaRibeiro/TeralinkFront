@@ -11,7 +11,10 @@ export const Logo = styled.img`
 position:absolute;
 top: 0;
 left: 0;
-width: 12.5rem;
+width: 130px;
+margin-top:30px;
+margin-left: 50px;
+cursor: pointer;
 z-index: 2; 
 @media (max-width: 768px) {
     display: none;
