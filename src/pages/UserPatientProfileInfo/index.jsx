@@ -33,7 +33,8 @@ export const UserPatientProfileInfo = () => {
             <h2>E-mail</h2>
             <Input />
             <h2>CPF</h2>
-            <Input />
+            <Input 
+            disabled={true}/>
           </InputArea>
           <ButtonArea>
             <a href="/userpatientprofile"><BackButton>Voltar</BackButton></a>
