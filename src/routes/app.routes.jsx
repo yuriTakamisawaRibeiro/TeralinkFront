@@ -6,6 +6,9 @@ import { SignUpPatient } from '../pages/SignUpPatient';
 import { UserPatientProfile } from '../pages/UserPatientProfile';
 import { UserPatientProfileInfo } from '../pages/UserPatientProfileInfo';
 import { UserPatientProfileCredentials } from '../pages/UserPatientProfileCredentials';
+import { UserTherapistProfile } from '../pages/UserTherapistProfile';
+import { UserTherapistProfileInfo } from '../pages/UserTherapistProfileInfo';
+import { UserTherapistProfileCredentials } from '../pages/UserTherapistProfileCredentials';
 import { SignUpTerapeuta } from '../pages/SignUpTerapeuta';
 import { UserPassword }from '../pages/UserPassword';
 
@@ -19,6 +22,9 @@ export function AppRoutes() {
             <Route path="/userpatientprofile" element={<UserPatientProfile />} />
             <Route path="/userpatientprofileinfo" element={<UserPatientProfileInfo />} />
             <Route path="/userpatientprofilecredentials" element={<UserPatientProfileCredentials />} />
+            <Route path="/usertherapistprofile" element={<UserTherapistProfile/>} />
+            <Route path="/usertherapistprofileinfo" element={<UserTherapistProfileInfo/>} />
+            <Route path="/usertherapistprofilecredentials" element={<UserTherapistProfileCredentials/>} />
             <Route path ="/singupterapeuta" element={<SignUpTerapeuta/>} />
             <Route path="/userpassword" element={<UserPassword/>} />
             
