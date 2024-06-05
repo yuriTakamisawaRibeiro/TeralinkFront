@@ -65,3 +65,39 @@ export const BackButton = styled.button`
   color: #fff;
   font-size: 20px;
 `;
+
+
+export const UpdateButton = styled.button`
+  padding: 8px 16px;
+
+  width: 138px;
+  height: 50px;
+  background: #24d898;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+`;
+
+export const Input = styled.input`
+  box-sizing: border-box;
+
+  width: 400px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: #fff;
+  padding-left: 10px;
+  font-size: 20px;
+`;
+
+
+export const InputArea = styled.div`
+  > h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+`;
