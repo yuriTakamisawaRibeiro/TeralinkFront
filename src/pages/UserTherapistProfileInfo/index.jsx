@@ -6,10 +6,7 @@ import {
   Title,
   Area,
   ButtonArea,
-  InputArea,
-  Input,
   BackButton,
-  UpdateButton,
 } from "./styles";
 import background1 from "../../assets/background1.svg";
 import { useNavigate } from "react-router-dom";

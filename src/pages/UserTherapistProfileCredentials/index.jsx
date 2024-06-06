@@ -13,6 +13,7 @@ import {
   DeleteAccountButton
 } from "./styles";
 import background1 from "../../assets/background1.svg";
+import { api } from "../../services/api";
 
 import { useNavigate } from "react-router-dom";
 
@@ -33,7 +34,9 @@ export const UserTherapistProfileCredentials = () => {
             <Input 
             disabled={true}/>
           </InputArea>
+          
           <ButtonArea>
+            
             <a href="/usertherapistprofile"><BackButton>Voltar</BackButton></a>
             <UpdateButton>Enviar</UpdateButton>
           </ButtonArea>
