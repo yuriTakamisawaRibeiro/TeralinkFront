@@ -26,6 +26,8 @@ export const UserPatientProfileInfo = () => {
     cpf: ''
   });
 
+  
+
   const [newName, setNewName] = useState('');
   const [newEmail, setNewEmail] = useState('');
   const [isNameChecked, setIsNameChecked] = useState(false);
@@ -116,24 +118,28 @@ export const UserPatientProfileInfo = () => {
           <InputArea>
             <h2>Nome completo</h2>
             <Input value={newName} onChange={(e) => setNewName(e.target.value)} disabled={!isNameChecked} />
+            <div style={{ marginLeft: '20px', display: 'inline-block' }}>
             <input
           type="checkbox"
           checked={isNameChecked}
           onChange={(e) => setIsNameChecked(e.target.checked)}
         />
+        </div>
             <h2>E-mail</h2>
             <Input value={newEmail} onChange={(e) => setNewEmail(e.target.value)} disabled={!isEmailChecked}/>
+            <div style={{ marginLeft: '20px', display: 'inline-block' }}>
             <input
           type="checkbox"
           checked={isEmailChecked}
           onChange={(e) => setIsEmailChecked(e.target.checked)}
         />
+        </div>
             <h2>CPF</h2>
             <Input value={user.cpf} disabled={true}/>
           </InputArea>
           <ButtonArea>
             <a href="/userpatientprofile"><BackButton>Voltar</BackButton></a>
-            <UpdateButton onClick={handleUpdateInfo}>Atualizar Informações</UpdateButton>
+            <UpdateButton onClick={handleUpdateInfo}>Atualizar</UpdateButton>
           </ButtonArea>
         </Area>
       </DataArea>
