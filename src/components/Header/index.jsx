@@ -1,8 +1,10 @@
-import { Container, Content, Navigation, Icon, Dropdown, DropdownItem } from "./styles";
+import { Container, Content, Navigation, Icon, Dropdown, DropdownItem, StyledLink } from "./styles";
 import teralinklogo from '../../assets/teralinklogo.png';
 import { FaUser } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 
 export function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -11,7 +13,7 @@ export function Header() {
     const navigate = useNavigate();
 
     // Função para verificar se o usuário está logado
-    const isLoggedIn = () =>!!localStorage.getItem('token');
+    const isLoggedIn = () => !!localStorage.getItem('token');
 
     const handleEntrarClick = () => {
         setShowDropdown(!showDropdown);
@@ -29,14 +31,13 @@ export function Header() {
         navigate('/signupterapeuta'); // Navega para a página de cadastro do terapeuta
     };
 
-
     const handleUserIconClick = () => {
         navigate('/userpatientprofile');
     };
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownRef.current &&!dropdownRef.current.contains(event.target)) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setShowDropdown(false);
             }
         };
@@ -56,26 +57,32 @@ export function Header() {
 
                 <Navigation>
                     <ul>
-                        <li>Como funciona</li>
-                        <li>Contato</li>
-                        <li>Sobre nós</li>
+                        <li>
+                            <StyledLink to="/comofunciona">Como funciona</StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to="/sobre">Sobre nós</StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to="/contato">Contato</StyledLink>
+                        </li>
                         {!isLoggedIn() && (
                             <li onClick={handleEntrarClick} style={{ position: 'relative' }}>
                                 Entrar
                                 {showDropdown && (
                                     <Dropdown ref={dropdownRef}>
-                                    <DropdownItem 
-                                            className={dropdownActiveIndex === 1? 'active' : ''} 
+                                        <DropdownItem
+                                            className={dropdownActiveIndex === 1 ? 'active' : ''}
                                             onClick={handleTerapeutaClick}
                                         >
                                             <a href="/SignInPatient">Como paciente</a>
                                         </DropdownItem>
-                                        <DropdownItem 
-                                            className={dropdownActiveIndex === 1? 'active' : ''} 
+                                        <DropdownItem
+                                            className={dropdownActiveIndex === 1 ? 'active' : ''}
                                             onClick={() => handleDropdownItemClick(1)}
                                         >
                                             <a href="/SingUpTerapeuta">Como terapeuta</a>
-                                            
+
                                         </DropdownItem>
                                     </Dropdown>
                                 )}
@@ -90,3 +97,4 @@ export function Header() {
         </Container>
     );
 }
+

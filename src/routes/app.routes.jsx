@@ -11,6 +11,10 @@ import { UserTherapistProfileInfo } from '../pages/UserTherapistProfileInfo';
 import { UserTherapistProfileCredentials } from '../pages/UserTherapistProfileCredentials';
 import { SignUpTerapeuta } from '../pages/SignUpTerapeuta';
 import { UserPassword }from '../pages/UserPassword';
+import { Contato }from '../pages/Contato';
+import { ComoFunciona }from '../pages/ComoFunciona';
+import {Sobre} from '../pages/Sobre';
+
 
 
 export function AppRoutes() {
@@ -27,6 +31,9 @@ export function AppRoutes() {
             <Route path="/usertherapistprofilecredentials" element={<UserTherapistProfileCredentials/>} />
             <Route path ="/singupterapeuta" element={<SignUpTerapeuta/>} />
             <Route path="/userpassword" element={<UserPassword/>} />
+            <Route path="/comofunciona" element={<ComoFunciona/>} />
+            <Route path="/contato" element={<Contato/>} />
+            <Route path="/sobre" element={<Sobre/>} />
             
         </Routes>
     );
