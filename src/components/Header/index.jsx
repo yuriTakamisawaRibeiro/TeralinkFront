@@ -1,10 +1,8 @@
-import { Container, Content, Navigation, Icon, Dropdown, DropdownItem, StyledLink } from "./styles";
+import { Container, Content, Navigation, Icon, Dropdown, DropdownItem, StyledLink, LogoLink, LogoImg, EnterLink } from "./styles";
 import teralinklogo from '../../assets/teralinklogo.png';
 import { FaUser } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
-import { Link } from "react-router-dom";
-
 
 export function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -29,6 +27,7 @@ export function Header() {
 
     const handleTerapeutaClick = () => {
         navigate('/signupterapeuta'); // Navega para a página de cadastro do terapeuta
+        setShowDropdown(false); // Fecha o dropdown após clicar
     };
 
     const handleUserIconClick = () => {
@@ -51,9 +50,9 @@ export function Header() {
     return (
         <Container>
             <Content>
-                <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }} style={{ textDecoration: 'none' }}>
-                    <img src={teralinklogo} alt="logo da Teralink" />
-                </a>
+                <LogoLink to="/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
+                    <LogoImg src={teralinklogo} alt="logo da Teralink" />
+                </LogoLink>
 
                 <Navigation>
                     <ul>
@@ -68,24 +67,19 @@ export function Header() {
                         </li>
                         {!isLoggedIn() && (
                             <li onClick={handleEntrarClick} style={{ position: 'relative' }}>
-                                Entrar
-                                {showDropdown && (
-                                    <Dropdown ref={dropdownRef}>
-                                        <DropdownItem
-                                            className={dropdownActiveIndex === 1 ? 'active' : ''}
-                                            onClick={handleTerapeutaClick}
-                                        >
-                                            <a href="/SignInPatient">Como paciente</a>
-                                        </DropdownItem>
-                                        <DropdownItem
-                                            className={dropdownActiveIndex === 1 ? 'active' : ''}
-                                            onClick={() => handleDropdownItemClick(1)}
-                                        >
-                                            <a href="/SingUpTerapeuta">Como terapeuta</a>
-
-                                        </DropdownItem>
-                                    </Dropdown>
-                                )}
+                                <EnterLink>Entrar</EnterLink>
+                                <Dropdown ref={dropdownRef} show={showDropdown}>
+                                    <DropdownItem
+                                        onClick={handleTerapeutaClick}
+                                    >
+                                        <a href="/SignInPatient">Como paciente</a>
+                                    </DropdownItem>
+                                    <DropdownItem
+                                        onClick={() => handleDropdownItemClick(1)}
+                                    >
+                                        <a href="/SingUpTerapeuta">Como terapeuta</a>
+                                    </DropdownItem>
+                                </Dropdown>
                             </li>
                         )}
                         {isLoggedIn() && (
@@ -97,4 +91,3 @@ export function Header() {
         </Container>
     );
 }
-

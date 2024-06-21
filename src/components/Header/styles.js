@@ -2,50 +2,63 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   padding-top: 15px;
 `;
 
 export const Content = styled.div`
   width: 100%;
-  justify-content: space-between;
-  padding: 20px 12vw;
+  padding: 20px 2vw;
   display: flex;
   align-items: center;
-  position: relative;
-  > a img {
-    height: 120px;
+  justify-content: space-between; /* Distribui os elementos horizontalmente */
+  max-width: 1200px; /* Defina a largura máxima conforme necessário e centraliza */
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
+export const LogoLink = styled(Link)`
+  display: flex;
+  align-items: center;
+`;
+
+export const LogoImg = styled.img`
+  max-width: 200px;
+`;
+
 export const Navigation = styled.nav`
+  margin-top: 10px;
+
   > ul {
     display: flex;
     list-style: none;
-    gap: 60px;
+    gap: 30px;
     font-weight: 600;
-    font-size: 22px;
-  }
+    font-size: 18px;
+    justify-content: center; /* Centraliza os itens horizontalmente */
 
-  ul li {
-    cursor: pointer;
-    position: relative;
-  }
-
-  li:hover {
-    color: #f6f6f6;
-    transition: 0.3s;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
   }
 `;
 
 export const Icon = styled.span`
-  font-size: 32px;
-  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
 
   &:hover {
     color: #fff;
     transition: all ease-in-out 200ms;
-    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
   }
 `;
 
@@ -59,10 +72,11 @@ export const Dropdown = styled.ul`
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 5px;
+  display: ${(props) => (props.show ? "block" : "none")}; /* Mostra o dropdown apenas se props.show for verdadeiro */
 
   li {
     padding: 8px 16px;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
   }
 
@@ -73,10 +87,8 @@ export const Dropdown = styled.ul`
 `;
 
 export const DropdownItem = styled.li`
-  padding: 8px 16px;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
-
   &:hover {
     color: #000;
     background-color: #ddd;
@@ -85,11 +97,22 @@ export const DropdownItem = styled.li`
 
 export const StyledLink = styled(Link)`
   color: #000;
-  font-weight: bold; /* Adiciona negrito */
-  text-decoration: none; /* Remove a decoração padrão */
+  font-weight: bold;
+  text-decoration: none;
+
   &:hover {
-    color: #f6f6f6; /* Altera a cor ao passar o mouse */
+    color: #f6f6f6;
     transition: 0.3s;
   }
 `;
 
+export const EnterLink = styled.span`
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    transition: 0.3s;
+  }
+`;
