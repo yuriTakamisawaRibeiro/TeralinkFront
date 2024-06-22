@@ -55,7 +55,6 @@ export const SignInPatient = () => {
                     <InputSignUpIn value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Senha" icon={FaLock} />
                     <ButtonSignUpIn title="Entrar" onClick={handleLogin} />
                     <ButtonContainer>
-                        <FormButton title="Esqueceu sua senha?" onClick={handleForgotPasswordClick} />
 
                         <a href="/SignUpPatient">
                             <FormButton title="Crie sua conta" />
