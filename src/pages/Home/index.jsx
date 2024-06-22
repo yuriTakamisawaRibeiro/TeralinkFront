@@ -9,8 +9,22 @@ import blob from "../../assets/blob.svg";
 import { BannerButton } from "../../components/BannerButton";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
+  const [userType, setUserType] = useState(""); // Armazena o tipo de usuário
+
+  // Função para obter o tipo de usuário (implemente de acordo com sua lógica)
+  useEffect(() => {
+    const getUserType = async () => {
+      // Utilize sua lógica para obter o tipo de usuário (ex: API, localStorage)
+      const user = await getUserFromAPI();
+      setUserType(user.type);
+    };
+    getUserType();
+  }, []);
+
   return (
     <Container>
       <Content1>
@@ -22,7 +36,9 @@ export const Home = () => {
             <h1>Uma vida organizada <br /> é terapia.</h1>
             <ButtonArea>
               <h2>Agende sua sessão</h2>
+              <Link to={userType === "1" ? "/STerapeuta" : "/SPaciente"}>
               <BannerButton title="Agendar" />
+              </Link>
             </ButtonArea>
           </BannerText>
         </BannerArea>
