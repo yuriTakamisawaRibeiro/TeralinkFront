@@ -1,27 +1,26 @@
+
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding: 3.125rem; /* Padding para distância das bordas da tela */
+  position: relative;
+
+  @media (min-width: 769px) {
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center; 
-    height: 100vh; 
-    z-index: 1;
-    margin-right:5.313rem;
-    margin-left:3.125rem;
+    align-items: flex-start;
+  }
 `;
 
 export const Logo = styled.img`
-position:absolute;
-top: 0;
-left: 0;
-height: 130px;
-margin-left: 50px;
-margin-top:30px;
-cursor: pointer;
-z-index: 2; 
-@media (max-width: 768px) {
-    display: none;
-}
+  height: 130px;
+  cursor: pointer;
+  z-index: 2;
 `;
 
 export const Welcome = styled.img`
@@ -33,15 +32,17 @@ export const Welcome = styled.img`
 `;
 
 export const Content = styled.div`
-    z-index: 1; 
+  z-index: 1;
+  text-align: center; /* Centraliza o conteúdo */
+  max-width: 600px; /* Largura máxima do conteúdo */
 `;
 
 export const Title = styled.h1`
-    z-index: 1; 
-    font-weight: bold;
-    text-align:center;
-    font-size:2.188rem;
-    padding-bottom:1.25rem;
+  z-index: 1;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.188rem;
+  padding-bottom: 1.25rem;
 `;
 
 export const Wave = styled.img`
@@ -55,5 +56,5 @@ export const Wave = styled.img`
 `;
 
 export const ButtonContainer = styled.div`
-`
-
+  margin-top: 20px;
+`;

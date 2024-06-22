@@ -56,9 +56,7 @@ export function Header() {
 
                 <Navigation>
                     <ul>
-                        <li>
-                            <StyledLink to="/comofunciona">Como funciona</StyledLink>
-                        </li>
+                       
                         <li>
                             <StyledLink to="/sobre">Sobre nós</StyledLink>
                         </li>

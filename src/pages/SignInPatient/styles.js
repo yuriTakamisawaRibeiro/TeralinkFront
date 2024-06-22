@@ -1,93 +1,70 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    z-index: 1;
-    margin-right: 5.313rem;
-    margin-left: 3.125rem;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding: 3.125rem; /* Padding para distância das bordas da tela */
+  position: relative;
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-        justify-content: flex-start;
-        margin: 0;
-        padding: 1rem;
-        height: auto;
-    }
+  @media (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 `;
 
 export const Logo = styled.img`
-    position: absolute;
-    top: 30px; /* Ajuste conforme necessário */
-    left: 50px; /* Ajuste conforme necessário */
-    height: 130px;
-    z-index: 2;
-    cursor: pointer;
-
-    @media (max-width: 768px) {
-        display: none;
-    }
+  height: 130px;
+  cursor: pointer;
+  z-index: 2;
 `;
 
 export const Welcome = styled.img`
-    margin-left: 150px;
-    height: 60vh;
+  display: none;
 
-    @media (max-width: 768px) {
-        display: none;
-    }
+  @media (min-width: 769px) {
+    display: block;
+    height: 60vh;
+    margin-left: 150px; /* Ajuste conforme necessário */
+  }
 `;
 
 export const Content = styled.div`
-    z-index: 1;
-
-    @media (max-width: 768px) {
-        margin-top: 3rem;
-    }
+  z-index: 1;
 `;
 
 export const Title = styled.h1`
-    z-index: 1;
-    font-weight: bold;
-    text-align: center;
-    font-size: 2.188rem;
-    padding-bottom: 1.875rem;
-    padding-top: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.188rem;
+  padding: 1.875rem 0;
 
-    @media (max-width: 768px) {
-        font-size: 1.5rem;
-        padding: 1rem 0;
-    }
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Wave = styled.img`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 0;
-
-    @media (max-width: 768px) {
-        position: relative;
-        height: auto;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
 `;
 
 export const ButtonContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.25rem;
-    margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.25rem;
+  margin-top: 1.25rem;
 
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        margin-top: 2rem;
-    }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
 `;
-
-

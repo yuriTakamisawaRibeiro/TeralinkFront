@@ -4,14 +4,16 @@ export const Container = styled.div`
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  min-height: 100vh; /* Garante que o container tenha pelo menos a altura da viewport */
 `;
 
 export const Background1 = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Ocupa toda a altura da viewport */
   background-image: url(${(props) => props.background});
   background-size: cover;
+  background-position: center;
   z-index: -1;
 `;
 
@@ -20,7 +22,7 @@ export const DataArea = styled.div`
   color: #000000;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
   align-items: center;
 `;
 
@@ -28,6 +30,10 @@ export const Title = styled.h1`
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const ButtonArea = styled.div`
@@ -36,11 +42,20 @@ export const ButtonArea = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    button {
+      margin-top: 10px;
+    }
+  }
 `;
 
 export const InputArea = styled.div`
+  width: 100%;
+  max-width: 400px;
   margin-bottom: 20px;
-  width: 400px;
 
   h2 {
     margin-bottom: 10px;
@@ -67,22 +82,25 @@ export const InputArea = styled.div`
     }
   }
 
-  input::placeholder,
-  textarea::placeholder {
-    font-weight: ; /* Adicionando negrito */
-    color: #000000; /* Destaque em branco */
-  }
-
   textarea {
     height: 120px;
     padding: 10px;
     resize: none;
   }
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    padding: 0 20px;
+
+    h2 {
+      font-size: 18px;
+    }
+  }
 `;
 
 export const BackButton = styled.button`
   padding: 8px 16px;
-  width: 100px;
+  width: 120px;
   height: 40px;
   border: 1px solid #ffffff;
   border-radius: 5px;
@@ -90,11 +108,15 @@ export const BackButton = styled.button`
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const UpdateButton = styled.button`
   padding: 8px 16px;
-  width: 100px;
+  width: 120px;
   height: 40px;
   background: #24d898;
   border-radius: 5px;
@@ -102,6 +124,11 @@ export const UpdateButton = styled.button`
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 10px;
+  }
 `;
 
 export const Input = styled.input`
@@ -120,5 +147,6 @@ export const Input = styled.input`
     color: #ccc;
   }
 `;
+
 
 
