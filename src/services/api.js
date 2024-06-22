@@ -8,6 +8,10 @@ const api = axios.create({
 const getToken = () => {
   return localStorage.getItem('token');
 };
+const getId = () => {
+  return localStorage.getItem('userId')
+}
+
 
 // Adiciona um interceptor de requisição para incluir o token JWT no cabeçalho Authorization
 api.interceptors.request.use(async (config) => {
@@ -21,4 +25,4 @@ api.interceptors.request.use(async (config) => {
   return Promise.reject(error);
 });
 
-export { api };
+export { api};

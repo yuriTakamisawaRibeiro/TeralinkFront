@@ -23,6 +23,34 @@ export const UserPatientProfileCredentials = () => {
   const [newPassword, setNewPassword] = useState('');
   const navigate = useNavigate();
 
+  const handleDeleteUser = async () => {
+    const token = localStorage.getItem('token'); // Obtém o token do usuário logado
+  const userId = localStorage.getItem('Id'); // Obtém o ID do usuário logado
+
+  if (!token || !userId) {
+    console.error('Token ou ID do usuário não encontrado.');
+    return; // Trate o erro de token ou ID ausente (exiba mensagem de erro)
+  }
+  
+    try {
+      const response = await api.delete('/auth/delete/${userId}', {
+        headers: {
+          Authorization: `Bearer ${token}`, // Inclui o token na requisição
+        },
+      });
+  
+      const { status, message } = response.data; // Extrai o status e a mensagem da resposta
+  
+      if (status === 'success') {
+        console.log('Usuário excluído com sucesso.'); // Registra mensagem de sucesso
+      } else {
+        console.error('Erro ao excluir usuário:', message); // Registra mensagem de erro
+      }
+    } catch (error) {
+      console.error('Erro durante a requisição:', error); // Registra erro geral
+    }
+  };
+
   const handleUpdatePassword = async () => {
     // Recupera o token do armazenamento local
     const token = localStorage.getItem('token');
@@ -80,7 +108,7 @@ export const UserPatientProfileCredentials = () => {
             <a href="/userpatientprofile"><BackButton>Voltar</BackButton></a>
             <UpdateButton onClick={handleUpdatePassword}>Atualizar</UpdateButton>
           </ButtonArea>
-          <DeleteAccountButton>Excluir Conta</DeleteAccountButton>
+          <DeleteAccountButton onClick={handleDeleteUser}>Excluir Conta</DeleteAccountButton>
         </Area>
       </DataArea>
     </Container>

@@ -14,6 +14,8 @@ import { UserPassword }from '../pages/UserPassword';
 import { Contato }from '../pages/Contato';
 import { ComoFunciona }from '../pages/ComoFunciona';
 import {Sobre} from '../pages/Sobre';
+import { STerapeuta } from '../pages/STerapeuta';
+import { SPaciente } from '../pages/SPaciente';
 
 
 
@@ -34,6 +36,9 @@ export function AppRoutes() {
             <Route path="/comofunciona" element={<ComoFunciona/>} />
             <Route path="/contato" element={<Contato/>} />
             <Route path="/sobre" element={<Sobre/>} />
+            <Route path ="/STerapeuta" element={<STerapeuta/>} />
+            <Route path ="/SPaciente" element={<SPaciente/>} />
+            
             
         </Routes>
     );
